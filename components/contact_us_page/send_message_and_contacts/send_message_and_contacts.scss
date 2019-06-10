@@ -1,0 +1,111 @@
+.send-message-and-contacts {
+    margin-top: 190px;
+}
+.send-message-and-contacts > div{
+    border: 2px solid #85B1F5;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+    width: 468px;
+    height: 729px;
+    padding: 34px;
+}
+.contact_image_for_page{
+    top: -102px;
+    width: 204px;
+    height: 204px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.our_address_img{
+    background-image: url("http://backcartestpro.qbex.io/assets/contact_us/our_address.png");
+}
+.our_email_img{
+    //width: 180px;
+    background-image: url("http://backcartestpro.qbex.io/assets/contact_us/our_email.png");
+}
+.send-message-and-contacts > div:first-child{
+    margin-right: 40px;
+}
+.contact_copy_information{
+    width: 400px;
+    height: 240px;
+    background: #FFFFFF;
+    padding: 30px;
+    border: 1px solid #DFDFDF;
+    box-sizing: border-box;
+    border-radius: 22px;
+    font-weight: 500;
+    line-height: 23px;
+    font-size: 14px;
+}
+.custom_button{
+    width: 100%;
+}
+.title{
+    font-weight: 600;
+    line-height: normal;
+    font-size: 16px;
+    margin-top: 122px;
+    margin-bottom: 35px;
+}
+
+
+@media screen and (max-width:1200px){
+    .send-message-and-contacts{
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 87px;
+    }
+    .send-message-and-contacts > div{
+        width: 47.8%;
+    }
+    .contact_copy_information,
+    .margin_input input,
+    .margin_input textarea,
+    .have-any-questions_block_input{
+        width: 100%;
+    }
+    .contact_copy_information{
+        height: auto;
+        font-size: 11px;
+    }
+    .title{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:900px){
+    .send-message-and-contacts{
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 150px;
+        flex-direction: column;
+    }
+    .send-message-and-contacts > div{
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        height: auto;
+    }
+    .contact_copy_information{
+        margin-bottom: 20px;
+    }
+    .margin_input textarea{
+        margin-bottom: -10px;
+    }
+    .send-message-and-contacts > div:first-child{
+        margin-bottom: 150px;
+    }
+    .title{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .send-message-and-contacts{
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 150px;
+    }
+}

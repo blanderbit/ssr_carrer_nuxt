@@ -1,0 +1,21 @@
+<section class="content-tabs d-flex justify-content-between">
+    <div class="tab_content_information" v-if="data_tab != null">
+        <div class="title_tab">
+            <p v-if="data_tab && data_tab.name" class="vstyle" v-html="data_tab.name"></p>
+        </div>
+        <div class="content_tab" v-html="data_tab.content"></div>
+    </div>
+    <div v-if="data_tab != null"
+         class="tab_content_image_container position-relative d-flex justify-content-center">
+        <div class="tab_content_image position-absolute image_size"
+             v-if="data_tab && data_tab.path"
+             :style="{backgroundImage: `url(${data_tab.path})`, ...data_tab.style}">
+        </div>
+        <div class="tab_content_elips image_size"></div>
+    </div>
+    <!--<div class="block_img d-flex justify-content-center position-relative">-->
+        <!--<img :src="data_tab.path">-->
+        <!--<div class="image_div background_image position-absolute"></div>-->
+    <!--</div>-->
+</section>
+

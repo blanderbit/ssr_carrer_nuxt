@@ -1,0 +1,56 @@
+<div>
+    <div  class="blog-page d-flex flex-column align-items-center">
+        <!--v-if="!screen.active"-->
+        <div class="title_block custom_title text-capitalize vstyle">
+            <!--             v-if="final && final.title"
+             v-html="final.title"-->
+            Blog Page
+        </div>
+        <div class="small_text custom_small_title vstyle">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+            <!--v-if="final && final.description"
+             v-html="final.description"-->
+        </div>
+        <div class="check_block_img position-relative">
+            <div class="check_image"></div>
+        </div>
+        <div class="fresh_post d-flex">
+            <div class="fresh_content">
+                <div class="post-title">Headline Lorem ipsum dolor</div>
+                <div class="post-description">apr 25, 2019 / John Dou </div>
+                <div class="post-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. </div>
+                <div class="learn_more">Learn More</div>
+            </div>
+            <div class="fresh_img">
+                <img src="https://images.unsplash.com/photo-1543270122-869908274728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+            </div>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="What are you locking for">
+        </div>
+        <div class="search story">
+            All Srories
+        </div>
+        <div class="fresh_post all_post d-flex" v-for="one in [1,2,3]">
+            <div class="fresh_content-all">
+                <div class="post-title post-title-all">Headline Lorem ipsum dolor</div>
+                <div class="post-description post-description-all">apr 25, 2019 / John Dou </div>
+                <div class="post-content post-content-all">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. </div>
+                <div class="learn_more">Learn More</div>
+            </div>
+            <div class="fresh_img fresh_img-all">
+                <img src="https://images.unsplash.com/photo-1543270122-869908274728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+            </div>
+        </div>
+        <div class="button_to d-flex justify-content-center
+            align-items-center text-decoration-none
+            custom_button vstyle clstyle orange_style">
+            Load more Stories
+        </div>
+    </div>
+</div>
+

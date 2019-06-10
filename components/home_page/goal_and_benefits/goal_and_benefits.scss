@@ -1,0 +1,179 @@
+.goal-and-benefits {
+    margin-top: 5px;
+    height: 958px;
+    width: 100%;
+    background: #F4F8FF no-repeat center;
+    background-size: contain;
+}
+
+.container_benefits{
+    padding-top: 171px;
+    padding-bottom: 30px;
+}
+
+.title_block_benefits{
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 51px;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    color: #333333;
+    text-transform: capitalize!important;
+}
+.description_block_benefits{
+    margin-bottom: 80px;
+    font-weight: 500;
+}
+.item_block_information{
+    width: 48.5%;
+    padding:30px 34px;
+    background: white;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.item_block_information:nth-child(odd){
+    margin-right: 30px;
+}
+.image_elips{
+    width: 90px;
+    height: 90px;
+    background: #F4F8FF;
+    top: 0;
+    border-radius: 50%;
+}
+
+.image_for_information{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
+    top: 0;
+    z-index: 12;
+}
+
+.title_for_information{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333333
+}
+.title_block_benefits{
+    margin-bottom: 0;
+}
+.description_for_information{
+    margin: 0;
+}
+.description_for_information{
+     line-height: 23px;
+     font-size: 14px;
+}
+.item_block_information_text{
+    margin-left: 24px
+}
+
+@media screen and (max-width:1224px){
+    .goal-and-benefits{
+        height: auto;
+        margin-top: 78px;
+    }
+    .elem_elipse{
+        height: 170px;
+    }
+    .container_benefits {
+        padding-top: 110px;padding-bottom: 78px;
+        align-items: center;
+    }
+    .item_block_information{
+        width: 60%;
+        padding: 30px;
+    }
+    .item_block_information:nth-child(odd){
+        margin-right: 0;
+    }
+    .item_block_information_text{
+        width: 68%;
+    }
+    .container_margin{
+        width: 100%;
+        margin: 0;
+    }
+    .title_block_benefits{
+        font-size: 20px;
+    }
+    .description_block_benefits{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1023px){
+    .elem_elipse{
+        height: 130px;
+    }
+    .item_block_information{
+        width: 75%;
+    }
+}
+@media screen and (max-width:580px){
+    .item_block_information{
+        flex-direction: column;
+        text-align: center;
+        width: 58%;
+    }
+    .item_block_information_text{
+        width: 100%;
+        margin: 0;
+    }
+    .small_text{
+        text-align: center!important;
+    }
+    .title_for_information{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .title_block_benefits{
+        font-size: 14px;
+    }
+    .description_block_benefits{
+        font-size: 12px;
+    }
+    .elem_elipse{
+        height: 71px;
+    }
+    .description_for_information{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:560px){
+    .item_block_information{
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+    .title_for_information{
+        font-size: 14px;
+    }
+    .small_text{
+        margin: 0;
+    }
+    .container_benefits{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .title_block_benefits{
+        margin: 0;
+    }
+    .description_block_benefits{
+        margin-bottom: 40px;
+    }
+    .goal-and-benefits{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 400px){
+    .elem_elipse{
+        height: 45px;
+    }
+}

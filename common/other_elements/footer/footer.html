@@ -1,0 +1,94 @@
+<footer class="d-flex justify-content-center flex-lg-column align-items-center">
+    <div v-if="!screen.active" class="col-xl- container_margin d-flex justify-content-between align-items-baseline">
+        <div class="footer_logo"><span style="opacity: 0">logo</span></div>
+        <nav class="footer_menu d-flex">
+            <ul class="container_footer_menu">
+                <li v-for="list in menu_list" style="font-weight: 600">
+                    <router-link class="text_style vstyle"
+                                 :to="list.path"
+                                 v-html="list.name">
+                    </router-link>
+                </li>
+            </ul>
+            <div class="container_payments">
+                <div class="payments" v-for="payment in payments"
+                     :style="{'background-image': 'url('+base_url + 'assets/card/' + payment+'.svg)'}"></div>
+            </div>
+            <div class="text_style footer_text vstyle" v-if="footer" v-html="footer"></div>
+        </nav>
+        <div class="footer_badge_language">
+            <b-dropdown id="ddown-divider"
+                        :text="language_now.code"
+                        variant="basic"
+                        offset="0"
+                        menu-class="rounded-menu"
+                        class="m-2 border btn-lang-border">
+                <b-dropdown-item
+                        v-for="lang in language_array"
+                        active-class="dropdown-item"
+                        :key="lang.name + lang.language"
+                        @click="language(lang)"
+                        v-if="lang.status === 1">
+                    {{lang.language}}
+                </b-dropdown-item>
+            </b-dropdown>
+            <div class="container_sotial_networks">
+                <a class="sotial_networks"
+                   v-for="sotial in sotial_networks"
+                   :style="{backgroundImage: `url(${sotial.path})`}">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div v-if="screen.active" class="col-xl- container_margin d-flex justify-content-between align-items-baseline">
+        <div class="footer_logo"><span style="opacity: 0">logo</span></div>
+        <nav class="footer_menu d-flex">
+            <ul class="container_footer_menu">
+                <li v-for="list in menu_list" style="font-weight: 600">
+                    <router-link class="text_style vstyle"
+                                 v-html="list.name"
+                                 :to="list.path">
+                    </router-link>
+                </li>
+            </ul>
+            <div class="footer_badge_language footer_badge_language_mobile">
+                <b-dropdown id="ddown-divider" :text="language_now.code" variant="basic" offset="0"
+                            menu-class="rounded-menu"  class="m-2 border btn-lang-border">
+                    <b-dropdown-item
+                            v-for="lang in language_array"
+                            active-class="dropdown-item"
+                            :key="lang.name + lang.language"
+                            @click="language(lang)"
+                            v-if="lang.status === 1">
+                        {{lang.language}}
+                    </b-dropdown-item>
+                </b-dropdown>
+            </div>
+            <div class="container_sotial_networks">
+                <a class="sotial_networks"
+                   v-for="sotial in sotial_networks"
+                   :style="{backgroundImage: `url(${sotial.path})`}">
+                </a>
+            </div>
+            <div class="container_payments">
+                <div class="payments" v-for="payment in payments"
+                   :style="{'background-image': 'url('+base_url + 'assets/card/' + payment+'.svg)'}"></div>
+            </div>
+            <div class="text_style footer_text vstyle" v-if="footer" v-html="footer"></div>
+        </nav>
+        <div class="footer_badge_language">
+            <b-dropdown id="ddown-divider" :text="language_now.code" variant="basic" offset="0"
+                        menu-class="rounded-menu"  class="m-2 border btn-lang-border">
+                <b-dropdown-item
+                        v-for="lang in language_array"
+                        active-class="dropdown-item"
+                        :key="lang.name + lang.language"
+                        @click="language(lang)"
+                        v-if="lang.status === 1">
+                    {{lang.language}}
+                </b-dropdown-item>
+            </b-dropdown>
+        </div>
+    </div>
+</footer>

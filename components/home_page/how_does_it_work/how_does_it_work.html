@@ -1,0 +1,88 @@
+<section class="how-does-it-work d-flex justify-content-center">
+    <div v-if="!screen.active" class="container_how-does-it-work">
+        <div class="title_block_how-does-it-work text-center text-capitalize"
+            v-if="threeSection && threeSection.title"
+            v-html="threeSection.title">
+        </div>
+        <div class="small_text description_block_how-does-it-work text-center"
+             v-if="threeSection && threeSection.description"
+             v-html="threeSection.description">
+        </div>
+        <div class="block_information_how-does-it-work">
+            <div class="item_block_information_how-does-it-work d-flex align-items-center"
+                 v-for="(item, index) in information_how_does_it_work">
+                <div class="image_block_for_information d-flex justify-content-around">
+                    <div class="number text-center">
+                        {{index + 1}}
+                    </div>
+                    <div style="width: 80%" :style="{order: item.order,
+                      marginRight: item.order > -1 ? '0': '20px',
+                       marginLeft: item.order > -1 ? '0': '20px'}">
+                        <div class="title_for_information text-center nstyle vstyle clstyle"
+                             v-if="item && item.title"
+                             v-html="item.title">
+                        </div>
+                        <div class="small_text description_for_information text-center nstyle vstyle clstyle"
+                             v-if="item && item.description"
+                             v-html="item.description">
+                        </div>
+                    </div>
+                </div>
+                <div class="position-relative"
+                     :style="{order: item.order,
+                      marginRight: item.order > -1 ? '0': '30px',
+                       marginLeft: item.order < 0 ? '0': '30px'}">
+                    <div class="image_elips position-relative"></div>
+                    <div class="image_for_information d-flex"
+                         :style="{backgroundImage: `url(${item.path_image})`,
+                          'background-position':  index == 1 ?'3px 61px' : 'center'}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div v-if="screen.active" class="container_how-does-it-work">
+        <div class="title_block_how-does-it-work text-center text-capitalize"
+             v-if="threeSection && threeSection.title"
+             v-html="threeSection.title">
+        </div>
+        <div class="small_text description_block_how-does-it-work text-center"
+             v-if="threeSection && threeSection.description"
+             v-html="threeSection.description">
+        </div>
+        <div class="block_information_how-does-it-work">
+            <div class="item_block_information_how-does-it-work d-flex align-items-center"
+                 v-for="(item, index) in information_how_does_it_work">
+                <div class="image_block_for_information d-flex ">
+                    <div class="number text-center">
+                        {{index + 1}}
+                    </div>
+                    <div style="width: 85%" :style="{order: item.order,
+                      marginRight: item.order > -1 ? '0': '25px',
+                       marginLeft: item.order <= 1 ? '0': '25px'}"
+                    class="">
+                        <div class="title_for_information text-center nstyle vstyle clstyle"
+                             v-if="item && item.title"
+                             v-html="item.title">
+                        </div>
+                        <div class="small_text description_for_information text-center nstyle vstyle clstyle"
+                             v-if="item && item.description"
+                             v-html="item.description">
+                        </div>
+                    </div>
+                </div>
+                <div class="position-relative"
+                     :style="{order: item.order,
+                      marginRight: item.order > -1 ? '0': '65px',
+                       marginLeft: item.order < 0 ? '0': '65px'}">
+                    <div class="image_elips position-relative"></div>
+                    <div class="image_for_information d-flex"
+                         :style="{backgroundImage: `url(${item.path_image})`,
+                         'background-position':  index == 1 ?'3px 61px' : 'center',
+                         backgroundPosition:  index == 1  && screen.value < 580?'3px 41px' : 'center'}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

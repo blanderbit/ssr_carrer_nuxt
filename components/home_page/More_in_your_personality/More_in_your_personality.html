@@ -1,0 +1,88 @@
+<div>
+    <section v-if="!screen.active" class="more-in-your-personality d-flex justify-content-center align-items-baseline">
+        <div class="container_margin d-flex justify-content-center align-items-center flex-column">
+            <div class="container_data d-flex align-items-center">
+                <div class="text_container">
+                    <div class="title_block vstyle"
+                         style="word-break: break-word;"
+                         v-if="firstSection"
+                         v-html="firstSection.title"></div>
+                    <div class="small_text more-in-your-personality_small_text vstyle"
+                         style="word-break: break-word;"
+                         v-if="firstSection && firstSection.description"
+                         v-html="firstSection.description">
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <router-link :to="'tests'"
+                             class="button_to d-flex justify-content-center
+                             align-items-center text-decoration-none
+                             custom_button vstyle clstyle"
+                             v-if="firstSection && firstSection.testButton"
+                             v-html="firstSection.testButton">
+                        </router-link>
+                        <a class="button_to d-flex justify-content-center align-items-center
+                        text-decoration-none orange_style custom_button vstyle clstyle"
+                           target="_blank"
+                           href="http://backcartestpro.qbex.io/images/sample-report-career-test-pro.pdf"
+                           v-if="firstSection && firstSection.reportButton"
+                           v-html="firstSection.reportButton">
+                        </a>
+                    </div>
+                </div>
+                <div class="block_img d-flex justify-content-center position-relative">
+                    <img src="http://backcartestpro.qbex.io/assets/home_page/more_in_your_persanality.svg">
+                    <div class="image_div background_image position-absolute"></div>
+                </div>
+            </div>
+            <div class="container_scroll_down d-flex justify-content-center flex-lg-column align-items-center vstyle"
+                 v-scroll-to="'#benefits'">
+                <div v-if="firstSection && firstSection.scrollButton"
+                     v-html="firstSection.scrollButton"></div>
+                <div class="button_scroll background_image"></div>
+            </div>
+        </div>
+    </section>
+
+    <section v-if="screen.active" class="more-in-your-personality d-flex">
+        <div class="container_margin">
+            <div class="container_data d-flex align-items-center">
+                <div class="text_container">
+                    <div class="title_block vstyle" v-if="firstSection" v-html="firstSection.title"></div>
+                    <div class="small_text more-in-your-personality_small_text vstyle"
+                         v-if="firstSection && firstSection.description"
+                         v-html="firstSection.description">
+                    </div>
+                    <div class="d-flex justify-content-between block_button">
+                        <router-link :to="'tests'" class="button_to d-flex justify-content-center
+                             align-items-center text-decoration-none
+                             custom_button vstyle clstyle"
+                             v-if="firstSection && firstSection.testButton"
+                             v-html="firstSection.testButton">
+                        </router-link>
+                        <a class="button_to d-flex justify-content-center align-items-center
+                        text-decoration-none orange_style custom_button vstyle clstyle"
+                           target="_blank"
+                           href="http://backcartestpro.qbex.io/images/sample-report-career-test-pro.pdf"
+                           v-if="firstSection && firstSection.reportButton"
+                           v-html="firstSection.reportButton.length > 19
+                         ? firstSection.reportButton.substring(0, 19)
+                         : firstSection.reportButton">
+                        </a>
+                    </div>
+                </div>
+                <div class="block_img d-flex justify-content-center position-relative">
+                    <img src="http://backcartestpro.qbex.io/assets/home_page/more_in_your_persanality.svg">
+                    <div class="image_div background_image position-absolute"></div>
+                </div>
+            </div>
+            <div class="container_scroll_down d-flex justify-content-center flex-column align-items-center"
+                 v-scroll-to="'#benefits'">
+                <div v-if="firstSection && firstSection.scrollButton"
+                     v-html="firstSection.scrollButton"></div>
+                <div class="button_scroll background_image"></div>
+            </div>
+        </div>
+    </section>
+</div>
+

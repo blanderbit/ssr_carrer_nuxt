@@ -1,0 +1,178 @@
+.all-aptitude-test {
+    height: 530px;
+    width: 100%;
+    position: relative;
+    background: #F4F8FF;
+}
+.all-aptitude-test_container{
+    width: 1140px;
+    margin: 0 15px;
+}
+.custom_elem{
+    height: 531px;
+    clip-path: ellipse(75% 48% at 50% -30%);
+}
+.block_best_value{
+    width: 545px;
+    position: relative;
+    padding: 51px;
+    background: white;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.07);
+    border-radius: 20px
+}
+.custom_button{
+    width: 330px;
+}
+
+.middle_line{
+    width: 1px;
+    background: #F4F8FF;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: auto;
+    left: 290px;
+}
+
+.all-aptitude-list ul{
+    padding: 0;
+    margin: 0;
+}
+.all-aptitude-list ul{
+    line-height: 38px;
+    font-size: 14px;
+    list-style-image: url("http://backcartestpro.qbex.io/assets/home_page/arrow_ok.png");
+}
+.dollar{
+    font-weight: 600;
+    width: 20px;height: 66px;font-size: 38px;
+}
+.all-aptitude-list ul li{
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+
+.best_value{
+    font-weight: 600;
+    font-size: 50px;
+    margin-left: 30px;
+}
+.best_value_text{
+    font-size: 26px;
+    margin-top: 6px;
+    color: #4876D0;
+}
+
+.title_block_benefits{
+    font-weight: 800;
+    line-height: 51px;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    color: #333333;
+}
+.custom_button_mobile{
+    display: none;
+}
+@media screen and (max-width:1224px){
+    .elem_elipse{
+        clip-path: ellipse(115% 38% at 50% -30%);
+    }
+    .block_best_value {
+        width: 100%;
+    }
+    .custom_title{
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    .custom_small{
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .all-aptitude-test_container{
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        width: 610px;
+        margin: 100px 0;
+    }
+    .all-aptitude-test{
+        height: auto;
+    }
+    .middle_line{
+        //left: ;
+        left: 333px;
+    }
+    .custom_button_mobile{
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .custom_button_desktop{
+        display: none!important;
+    }
+    .custom_elem{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:1023px){
+    .all-aptitude-test_container {
+        width: 570px;
+    }
+}
+@media screen and (max-width: 767px){
+    .all-aptitude-test_container {
+        width: 290px;
+    }
+    .custom_title{
+        font-size: 14px;
+    }
+    .custom_small{
+        font-size: 12px;
+    }
+    .block_best_value{
+        flex-direction: column;
+    }
+    .all-aptitude-list ul {
+        font-size: 12px;
+    }
+    .middle_line{
+        height: 1px;
+        width: 100%;
+        left: 0;
+        top: 212px;
+    }
+    .best_value_number{
+        font-size: 40px;
+        justify-content: center!important;
+        margin-top: 30px;
+        color : #333333
+    }
+    .dollar{
+        margin-right: 5px;
+    }
+    .best_value{
+        margin: 0;
+    }
+    .best_value_text{
+        margin: 0;
+        margin-top: 5px;
+    }
+    .block_best_value{
+        padding: 30px;
+    }
+}
+@media screen and (max-width:580px){
+    .elem_elipse{
+        clip-path: ellipse(135% 36%  at 50% -30%);
+    }
+}
+@media screen and (max-width:560px){
+    .elem_elipse{
+        clip-path: ellipse(210% 36%  at 50% -30%);
+    }
+}
+@media screen and (max-width: 400px){
+
+}

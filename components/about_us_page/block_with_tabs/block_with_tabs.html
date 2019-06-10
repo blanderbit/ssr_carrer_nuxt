@@ -1,0 +1,32 @@
+<section class="block-with-tabs d-flex justify-content-center">
+    <div class="container_margin d-flex flex-column justify-content-center align-items-center">
+        <div class="text_style title_block text-capitalize vstyle"
+             v-if="aboutUs && aboutUs.title"
+             v-html="aboutUs.title">
+            <!--About  <span style="color:#F9892E"> Us</span>-->
+        </div>
+        <div class="tabs">
+            <div class="d-flex justify-content-between tabs_container">
+                <div class="item_tabs text_style"  v-for="(item, index) in list_tabs"
+                     @click="open_tab(index, item)">
+                    <div class="d-inline color_about vstyle"
+                         :ref="item.name + index" v-html="item.name"></div>
+                </div>
+            </div>
+            <div class="process_track">
+                <div class="process_scroll"
+                     :style="{
+                         transform: `translateX(${tab.tab_translate}px)`,
+                         width:`${tab.width_tab}px`,
+                         marginRight:`${tab.margin}px`,
+                         marginLeft:`${tab.margin}px`,
+                         }">
+                </div>
+            </div>
+        </div>
+        <content_tabs_component
+                :data_tab="tab.active_tab">
+        </content_tabs_component>
+    </div>
+</section>
+

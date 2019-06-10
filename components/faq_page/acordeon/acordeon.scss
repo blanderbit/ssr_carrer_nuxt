@@ -1,0 +1,95 @@
+.acordeon_item {
+    width: 100%;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.acordeon_title{
+    font-weight: 600;
+    font-size: 16px;
+    width: 80%;
+}
+.arrow_acordeon {
+    background-image: url("http://backcartestpro.qbex.io/assets/faq/arrow_down.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 17px;
+    height: 9px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+.block_acordeon{
+    padding: 34px;
+}
+.block_acordeon1:hover{
+    background: #F4F8FF;
+    /* List Shadow Normal */
+    border-radius: 20px 20px 0 0;
+}.block_acordeon2:hover{
+    background: #F4F8FF;
+    /* List Shadow Normal */
+
+     border-radius: 20px;
+}
+.block_acordeon:active{
+    background: #F4F8FF;
+    /* List Shadow Normal */
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1)
+}
+.middle_line{
+    width: 100%;
+    height: 1px;
+    //background: #DFDFDF;
+    transition: 0.5s all;
+    margin: 0;
+
+}
+.acordeon_content{
+    transition: 0.5s all;
+    overflow: hidden;
+    min-height: auto;
+    line-height: 23px;
+    font-size: 14px;
+}
+.acordeon_content > div{
+    padding: 34px;
+    padding-bottom: 10px;
+}
+
+
+
+@media screen and (max-width:1200px){
+    .container_faq_acordeon{
+        width: 75%;
+        margin: 0 127px;
+    }
+}
+
+
+@media screen and (max-width:900px){
+    .container_faq_acordeon{
+        width: 80%;
+        margin: 0 100px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .acordeon_title{
+        font-size: 12px;
+    }
+    .acordeon_content{
+        font-size: 12px;
+    }
+    .acordeon_content{
+        transition: 0.5s all;
+        overflow-y: scroll;
+        //min-height: 669px;
+    }
+}
+@media screen and (max-width:570px){
+    .container_faq_acordeon{
+        width: 90%;
+        margin: 0 100px;
+    }
+}

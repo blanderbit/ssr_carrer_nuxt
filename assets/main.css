@@ -1,0 +1,122 @@
+body{
+    /*background:  red;*/
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /*overflow-y: hidden;*/
+    font-weight: 500;
+    /*background: red;*/
+}
+.rounded-menu {
+    border-radius: 22px !important;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 16px;
+    width: 190px;
+}
+.input-information .confirm_input.dropdown > button {
+    color: #333333;
+    text-align: left;
+    padding: 9px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_badge_language .btn-lang-border.dropdown > button,
+.footer_badge_language .btn-lang-border.dropdown > button {
+    padding: 10.5px 29.21px;
+    font-size: 14px;text-transform: uppercase;
+    font-weight: 600;
+}
+#menu .header_badge_language .btn-lang-border.dropdown > button,
+#menu #ddown-divider{
+    width: 100%;
+}
+#menu .header_badge_language .btn-lang-border.dropdown > button:after{
+    margin-left: 50px;
+}
+.header_badge_language .btn-lang-border.dropdown > button:focus,
+.input-information .confirm_input.dropdown > button:focus,
+.footer_badge_language .btn-lang-border.dropdown > button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.input-information .confirm_input.dropdown > button:after{
+    margin-right: 15px;
+    border-top: 0.3em solid #8B8B8B;
+}
+.header_badge_language .btn-lang-border.dropdown > button:after,
+.footer_badge_language .btn-lang-border.dropdown > button:after {
+    margin-left: 30px;
+    border-top: 0.3em solid #8B8B8B;
+}
+.header_badge_language .btn-lang-border.dropdown.show > button:after,
+.input-information .confirm_input.dropdown.show > button:after,
+.footer_badge_language .btn-lang-border.dropdown.show > button:after {
+    margin-left: 30px;
+    border-top: 0;
+    border-bottom: 0.3em solid;
+}
+.header_badge_language .btn-lang-border.dropdown > .dropdown-menu,
+.footer_badge_language .btn-lang-border.dropdown > .dropdown-menu {
+    transform: translate3d(0px, 43px, 0px) !important;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15) !important;
+    border: none;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 138px;
+    position: absolute;
+}
+.header_badge_language .btn-lang-border.dropdown > .dropdown-menu a:hover,
+.footer_badge_language .btn-lang-border.dropdown > .dropdown-menu a:hover{
+background: #F4F8FF!important;
+}
+.input-information .confirm_input.dropdown > .dropdown-menu{
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    border: none;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)!important;
+}
+.information .content{
+    line-height: 23px;
+    font-size: 14px;
+}
+.information strong{
+    font-weight: 600;
+}
+.dropdown-toggle:after{
+    margin-bottom: -2px;
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+#menu .dropdown-menu{
+    /*width: 100%;*/
+    left: -14px!important;
+}
+@media screen and (max-width:1300px){
+    .footer_badge_language .dropdown-menu, .header_badge_language .dropdown-menu{
+        left: -70px!important;
+    }
+}
+@media screen and (max-width:767px){
+    .footer_badge_language .dropdown-menu, .header_badge_language .dropdown-menu{
+        left: -35px!important;
+    }
+}
+.acordeon_content ul, .content_tab ul{
+    padding-left: 23px;
+    list-style-image: url("http://backcartestpro.qbex.io/assets/home_page/arrow_ok.png");
+}
+.acordeon_content ul li, .content_tab ul li {
+    margin-bottom: 20px;
+}

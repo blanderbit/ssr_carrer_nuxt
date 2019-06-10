@@ -1,0 +1,136 @@
+.blog-page {
+    margin-top: 90px;
+}
+
+.custom_small_title {
+    margin-bottom: 60px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.check_image {
+    width: 212px;
+    height: 212px;
+    background-image: url("http://backcartestpro.qbex.io/assets/blog_page/blog_page.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 80px;
+
+}
+.fresh_post img{
+    border-radius: 5px;
+}
+.fresh_post {
+    max-width: 920px;
+    max-height: 420px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 65px 43px;
+    margin-bottom: 100px;
+}
+.fresh_content{
+    margin-right: 81px;
+    width: 100%
+}
+.fresh_content-all{
+    width: 120%;
+    margin-right: 85px;
+}
+.fresh_img{
+    width: 100%
+}
+.fresh_img img{
+    height: 100%;width: 100%
+}
+.fresh_img-all{
+    width: 70%
+}
+.all_post{
+    max-height: 207px;
+    padding: 26px 40px;
+    margin-bottom: 50px;
+}
+
+.post-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    margin-bottom: 18px;
+}
+.post-title-all {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.post-description {
+    font-size: 14px;
+    line-height: 80%;
+    font-variant: small-caps;
+    color: #8B8B8B;
+    margin-bottom: 40px;
+}
+.post-description-all {
+    margin-bottom: 10px;
+}
+.post-content {
+    font-size: 14px;
+    line-height: 170%;
+    margin-bottom: 30px;
+}
+.post-content-all {
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 160%;
+}
+.learn_more {
+    font-size: 14px;
+    text-decoration-line: underline;
+    color: #4876D0;
+    font-weight: 600;
+}
+
+.search {
+    width: 920px;
+}
+
+.search input {
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    box-sizing: border-box;
+    border-radius: 22px;
+    width: 400px;
+    background-image: url("http://backcartestpro.qbex.io/assets/blog_page/search.svg");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 34px 13px;
+    padding-left: 70px;
+    padding-right: 15px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8B8B8B;
+    transition: 1s all;
+    margin-bottom: 40px;
+}
+
+.search input:focus {
+    outline: none;
+    width: 100%;
+    border: 1px solid #85B1F5;
+}
+
+.search input:hover {
+    border: 1px solid #D8E1F0;
+}
+.story{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.orange_style{
+    margin-top: 80px;
+    margin-bottom: 103px;
+}

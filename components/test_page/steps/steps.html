@@ -1,0 +1,140 @@
+
+<!--<script type="text/x-template" id="checkbox-template">-->
+
+<div>
+    <section class="steps d-flex justify-content-center flex-column align-items-center media_container">
+        <div class="title_block custom_title">
+            <span class="vstyle"
+                  v-if="testSection && testSection.STEP"
+                  v-html="testSection.STEP">
+            </span>
+
+                {{step}}
+              - <span style="color:#F9892E;" class="text-capitalize; vstyle" v-if="step_name"
+                            v-html="step_name"></span>
+        </div>
+        <div class="small custom_small">
+            <span class="vstyle" v-if="testSection && testSection.Questions"
+                  v-html="testSection.Questions"></span> {{step_amount}}
+        </div>
+        <menu_component
+                v-if="!screen.active"
+                :menu_array="step_menu.number"
+                :menu_padding="step_menu.padding"
+                :step="step"
+                :step_child="step_child"
+                :width="'890px'"
+                :screen="'desktop'"
+                :func="go_next"
+        :child_disabled_menu="child_disabled_menu">
+        </menu_component>
+        <menu_component
+                v-if="screen.active && (screen.value < 1200 && screen.value > 640)"
+                :menu_array="step < 6? [1,2,3,4,5] : [6,7,8,9,10]"
+                :screen="'tablet'"
+                :width="'443px'"
+                :step_child="step_child"
+                :menu_padding="[1,2,3,4,5]"
+                :step="step"
+                :func="go_next"
+                :child_disabled_menu="child_disabled_menu">
+        </menu_component>
+        <menu_component
+                v-if="screen.active && screen.value <= 640 "
+                :screen="'mobile'"
+                :width="'177px'"
+                :menu_array="[1,2]"
+                :step_child="step_child"
+                :menu_padding="[1,2]"
+                :step="step"
+                :func="go_next"
+                :child_disabled_menu="child_disabled_menu">
+        </menu_component>
+        <div class="small custom_small small2">
+            {{~~process}} % -
+            <span class="vstyle" v-if="process == 0 && testSection && testSection.arr"
+                  v-html="testSection.arr[0].description">
+            </span>
+            <span class="vstyle" v-if="process > 0 && process < 10 && testSection && testSection.arr"
+                  v-html="testSection.arr[1].description">
+            </span>
+            <span class="vstyle" v-if="process >= 10 && process < 100 && testSection && testSection.arr"
+                  v-html="testSection.arr[2].description">
+            </span>
+            <span class="vstyle" v-if="process == 100 && final && final.title"
+                style="text-transform: capitalize"
+                  v-html="final.title"></span>!
+        </div>
+        <div class="step_content d-flex flex-column">
+            <div class="step_content d-flex justify-content-end ellips_information" style="margin-bottom: 30px"
+                 :class="screen.value < 640 ?'justify-content-between' : 'justify-content-end'">
+                <info v-if="screen.value < 640"
+                      class="info" :active="step"></info>
+                <div class="select_questions d-flex justify-content-between">
+                    <div class="borders d-flex align-items-center justify-content-center position-relative" style="border: none">
+                        <div class="ellipse position-relative"
+                             :style="{background : '#77DCC1', width: '24px', height: '24px', left: 0}"></div>
+                        <div class="info_ellipse position-absolute vstyle clstyle"
+                             v-if="testSection && testSection.Like"
+                             v-html="testSection.Like"></div>
+                    </div>
+                    <div class="borders d-flex align-items-center justify-content-center position-relative" style="border: none">
+                        <div class="ellipse position-relative"
+                             :style="{background : '#FDC572', width: '24px', height: '24px', left: 0}"></div>
+                        <div class="info_ellipse position-absolute vstyle clstyle"
+                             v-if="testSection && testSection.Middle"
+                             v-html="testSection.Middle"></div>
+                    </div>
+                    <div class="borders d-flex align-items-center justify-content-center position-relative" style="border: none">
+                        <div class="ellipse position-relative"
+                             :style="{background : '#F59A9A', width: '24px', height: '24px', left: 0}"></div>
+                        <div class="info_ellipse position-absolute vstyle clstyle"
+                             v-if="testSection && testSection.Dislike"
+                             v-html="testSection.Dislike"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="questions">
+                <div class="item_question d-flex justify-content-between" v-for="(item, index) in data_step">
+                    <div ref="234234" class="number_questions borders d-flex align-items-center justify-content-center">
+                        <span v-if="step_child == 1">{{index + Number(step_amount.split('-')[0]) * step_child}}</span>
+                        <span v-if="step_child == 2">{{index + Number(step_amount.split('-')[0]) + 10}}</span>
+                        <span v-if="step_child == 3">{{index + Number(step_amount.split('-')[0]) + 20}}</span>
+                    </div>
+                    <div class="content_question borders d-flex align-items-center"
+                         v-if="item && item.questions_description && item.questions_description">
+                        {{item.questions_description.question}}
+                    </div>
+                    <div class="select_questions d-flex justify-content-between">
+                        <div class="borders"
+                             :class="{active: item.state == 1}" @click="select_item(index, 1)"></div>
+                        <div class="borders"
+                             :class="{active: item.state == 0.5}" @click="select_item(index, 0.5)"></div>
+                        <div class="borders"
+                             :class="{active: item.state == 0}" @click="select_item(index, 0)"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between"
+                 ref="back"
+                 style=" margin-top: 30px; margin-bottom: 254px" >
+                <router-link
+                        :to="back()"
+                        class="button_to custom_button
+                         d-flex justify-content-center align-items-center vstyle"
+                         v-disabled_button_back="{step:step, child: step_child}"
+                         v-if="testSection && testSection.Back"
+                         v-html="testSection.Back"></router-link>
+                <router-link
+                        :to="next()"
+                        class="button_to custom_button
+                        d-flex justify-content-center align-items-center vstyle"
+                         v-disabled_button_next="{step:step, array: data_step, child: step_child}"
+                         v-if="testSection && testSection.Next"
+                         v-html="testSection.Next"></router-link>
+            </div>
+        </div>
+    </section>
+</div>
+
+

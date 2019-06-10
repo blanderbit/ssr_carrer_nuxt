@@ -1,0 +1,129 @@
+
+
+.tab_content_information{
+    width: 570px;
+    padding-right: 48px;
+    margin-bottom: 246px;
+}
+
+.image_size{
+    width: 562px;
+    height: 562px;
+}
+.tab_content_image{
+    background-repeat: no-repeat;
+    top: 55px;
+    width: 572px;
+    height: 570px;
+}
+
+.title_tab{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.content_tab{
+    font-weight: 500;
+    line-height: 23px;
+    font-size: 14px;
+}
+.tab_content_elips{
+    background: #F4F8FF;
+    border-radius: 50%;
+}
+
+ul.content_tab{
+    padding-left: 20px;
+    list-style-image: url("http://backcartestpro.qbex.io/assets/home_page/arrow_ok.png");
+    margin-top: 43px;
+}
+ul.content_tab li{
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:1200px){
+    .content-tabs {
+        width: 100%;
+        padding: 0 47px;
+    }
+    .tab_content_image_container{
+        width: 100%;
+    }
+    .tab_content_information{
+        width: 100%;
+    }
+    .image_size{
+        width: 515px;
+        height: 515px;
+        background-size: contain;
+    }
+    .tab_content_image{
+        background-repeat: no-repeat;
+        top: 55px;
+        width: 515px;
+        height: 515px;
+    }
+    .title_tab{
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width:1023px){
+    .content-tabs{
+        flex-direction: column;
+        margin-bottom: 246px;
+        padding: 0 99px;
+        align-items: center;
+    }
+    .tab_content_image_container{
+        width: 555px;
+        height: 555px;
+    }
+    .image_size{
+        width: 555px;
+        height: 555px;
+        background-size: contain;
+    }
+    .tab_content_image{
+        background-repeat: no-repeat;
+        top: 55px;
+        width: 555px;
+        height: 555px;
+    }
+    .tab_content_information{
+        margin-bottom: 50px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:767px){
+    .content-tabs{
+        padding: 0 30px;
+    }
+    .tab_content_image_container{
+        width: 279px;
+        height: 279px;
+    }
+    .image_size{
+        width: 279px;
+        height: 279px;
+        background-size: contain;
+    }
+    .tab_content_image{
+        background-repeat: no-repeat;
+        top: 55px;
+        width: 279px;
+        height: 279px;
+    }
+    .title_tab{
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    ul.content_tab li{
+        font-size: 12px;
+    }
+}
+
+

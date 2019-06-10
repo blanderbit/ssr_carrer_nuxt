@@ -1,0 +1,78 @@
+<section class="send-message-and-contacts d-flex">
+
+    <div class="d-flex align-items-center flex-column position-relative">
+        <div class="our_address_img contact_image_for_page position-absolute"></div>
+        <div class="title_block title text-capitalize vstyle"
+             v-if="contactUs && contactUs.oneTitle"
+             v-html="contactUs.oneTitle"></div>
+        <div ref="copy"
+             class="contact_copy_information vstyle"
+             v-if="contactUs && contactUs.text"
+             v-html="contactUs.text">
+        </div>
+        <div class="d-flex flex-grow-1 align-items-end custom_button">
+            <div class="button_to align-self-end  d-flex custom_button
+             align-items-center justify-content-center vstyle"
+                 @click="copy_text()"
+                 v-if="contactUs && contactUs.copy"
+                 v-html="contactUs.copy">
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-center flex-column position-relative">
+        <div class="our_email_img position-absolute contact_image_for_page"></div>
+        <div class="title_block title text-capitalize vstyle"
+             v-if="contactUs && contactUs.twoTitle"
+             v-html="contactUs.twoTitle">
+        </div>
+        <div class="have-any-questions_block_input d-flex flex-column">
+            <div class="margin_input"
+                 :class="{margin_input_no_active: !error.name.errors}">
+                <input type="text"
+                       v-model="data.name"
+                       v-if="contactUs && contactUs.name"
+                       :class="{error:error.name.errors}"
+                       :placeholder="contactUs.name.replace(/(<([^>]+)>)/g,'')">
+                <div class="error" v-if="error.name.errors">
+                    <div>{{error.name.message.required}}</div>
+                </div>
+            </div>
+            <div class="margin_input"
+                 :class="{margin_input_no_active: !error.email.errors}">
+                <input type="text"
+                       v-if="contactUs && contactUs.email"
+                       v-model="data.email"
+                       :class="{error:error.email.errors}"
+                       :placeholder="contactUs.email.replace(/(<([^>]+)>)/g,'')">
+                <div class="error" v-if="error.email.errors">
+                    <div>{{error.email.message.required}}</div>
+                    <div>{{error.email.message.email}}</div>
+                </div>
+            </div>
+            <div class="margin_input"
+                 :class="{margin_input_no_active: !error.message.errors}">
+                <textarea
+                        v-model="data.message"
+                        v-if="contactUs && contactUs.message"
+                        :class="{error:error.message.errors}"
+                        :placeholder="contactUs.message.replace(/(<([^>]+)>)/g,'')"
+                        style="resize: none">
+                </textarea>
+                <div class="error"
+                     v-if="error.message.errors">
+                    <div>{{error.message.message.required}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-grow-1 align-items-end custom_button">
+            <a class="button_to align-self-end  d-flex custom_button
+              align-items-center justify-content-center vstyle"
+               @click="send_mail()"
+               v-if="contactUs && contactUs.sendButton"
+               v-html="contactUs.sendButton">
+            </a>
+        </div>
+    </div>
+</section>
+

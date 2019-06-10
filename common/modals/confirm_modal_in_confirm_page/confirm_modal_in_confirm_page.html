@@ -1,0 +1,25 @@
+<section class="confirm-modal-in-confirm-page d-flex justify-content-center align-items-center position-fixed "
+         @click.self="close_modal()"
+         :style="{background: transitions ? 'rgba(51, 51, 51, 0.1)':  'transparent'}">
+
+    <div class="content_modal d-flex align-items-center flex-column position-relative"
+         :style="{transform: transitions ? 'translateY(0%)':  'translateY(-200%)'}">
+        <div class="image_close position-absolute image" @click.self="close_modal()"></div>
+        <div class="custom_small vstyle"
+             v-if="modal && modal.title"
+             v-html="modal.title">
+        </div>
+        <div  class="custom_small vstyle"
+              style="margin-bottom: 60px"
+              v-if="modal && modal.content"
+              v-html="modal.content">
+        </div>
+        <div class="modal_image position-relative">
+            <div class="image_ellipse"></div>
+            <div class="image_in_modal position-absolute image"></div>
+        </div>
+        <div class="button_to custom_button d-flex align-items-center justify-content-center"
+        @click="confirm()">Ok</div>
+    </div>
+</section>
+

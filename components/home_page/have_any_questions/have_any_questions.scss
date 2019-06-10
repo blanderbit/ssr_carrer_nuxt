@@ -1,0 +1,99 @@
+
+.have-any-questions_image_and_input {
+    margin: 0 15px;
+    width: 965px;
+    margin-bottom: 150px;
+}
+
+.have-any-questions_information {
+    margin-bottom: 76px;
+}
+
+.have-any-questions_block_image {
+    width: 486px;
+    height: 486px;
+    margin-right: 70px;
+}
+.small_text{
+    margin-top: 0;
+}
+.have-any-questions_elips {
+    width: 408px;
+    height: 408px;
+    background: #F4F8FF;
+    border-radius: 50%;
+}
+
+.have-any-questions_image {
+    width: 220px;
+    height: 496px;
+    bottom: 30px;
+    background-image: url("http://backcartestpro.qbex.io/assets/home_page/have_any_questions.png");
+}
+
+.send_button {
+    width: 400px;
+}
+
+
+@media screen and (max-width:1224px){
+    .have-any-questions_image_and_input {
+        width: 86%;
+    }
+    .have-any-questions_information .title_block{
+        font-size: 20px;
+    }
+    .have-any-questions_information .small_text{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1023px){
+    .have-any-questions_block_image{
+        margin: 0;
+    }
+    .have-any-questions_image_and_input{
+        flex-direction: column;
+        align-items: center;
+    }
+    .margin_input,
+    .have-any-questions_block_input,
+    .have-any-questions_block_input input,
+    .have-any-questions_block_input textarea{
+        width: 100%;
+    }
+    .have-any-questions_block_image {
+        width: 286px;
+        height: 286px;
+        //margin-right: 70px;
+    }
+
+    .have-any-questions_elips {
+        width: 230px;
+        height: 230px;
+        background: #F4F8FF;
+        border-radius: 50%;
+    }
+
+    .have-any-questions_image {
+        width: 220px;
+        height: 296px;
+        bottom: 30px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("http://backcartestpro.qbex.io/assets/home_page/have_any_questions.png");
+    }
+
+}
+@media screen and (max-width:580px){
+
+}
+@media screen and (max-width:560px){
+
+}
+@media screen and (max-width: 400px){
+
+}
+
+

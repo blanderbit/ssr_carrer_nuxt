@@ -1,0 +1,176 @@
+.steps {
+    margin-top: 90px;
+}
+.step_content{
+    width: 890px;
+}
+.custom_button{
+    width: 190px;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 16px;
+}
+
+.borders{
+    border: 1px solid #DFDFDF;
+    box-sizing: border-box;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.number_questions{
+    width: 80px;
+    padding: 10px;
+    //margin-right: 30px;
+}
+.content_question{
+    width: 558px;
+    padding: 10px 30px;
+    font-size: 14px;
+}
+.select_questions{
+    width: 192px;
+}
+.select_questions >div{
+    width: 44px;
+    height: 44px;
+}
+.select_questions >div.active{
+    border: 1px solid #4876D0;
+    background-image: url("http://backcartestpro.qbex.io/assets/tests/arrov_ok.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.item_question{
+    margin-bottom: 30px;
+}
+.custom_small{
+    font-weight: 500;
+    line-height: normal;
+    font-size: 16px;
+    margin-bottom: 70px;
+}
+.small2 {
+    margin-bottom: 40px;
+}
+.ellips_information{
+    margin-bottom: 30px;
+    position: sticky;
+    top: 87px;
+    background-color: white;
+}
+.custom_title{
+    margin-bottom: 20px;
+}
+
+.orange_style{
+    left: 0;
+    top: -1px;
+    border: 2px solid #F9892E;
+    padding: 29px 0;
+    margin: 0;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.18);
+    //box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+}
+a{
+    color: black;
+}
+.info_ellipse{
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    padding: 5px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 11px;
+    top: -20px;
+    display: none;
+}
+.ellipse:hover + .info_ellipse{
+    display: block;
+}
+.ellipse{
+    width: 12px;
+    height: 12px;
+    left: -24px;
+    border-radius: 50%;
+    top: 2px;
+}
+
+@media screen and (max-width: 1024px){
+    .step_content{
+        width: 100%;
+    }
+    .step_content:last-child{
+        padding: 0 47px;
+    }
+    .title_block{
+        font-size: 20px;
+    }
+
+}
+@media screen and (max-width: 1023px){
+    .step_content:last-child {
+        padding: 0 99px;
+    }
+    .step_content:last-child .item_question{
+        flex-wrap: wrap;
+    }
+    .content_question{
+        width: 82%;
+    }
+    .select_questions{
+        margin-top: 15px;
+        margin-left: auto;
+    }
+    .title_block{
+        font-size: 16px;
+    }
+    .custom_small{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 767px){
+    .step_content:last-child {
+        padding: 0 30px;
+    }
+    .title_block{
+        font-size: 14px;
+        line-height: 25px;
+        text-align: center;
+    }
+    .steps{
+        margin-top: 70px;
+    }
+    .select_questions{
+        width: 170px;
+    }
+}
+@media screen and (max-width: 750px){
+    .ellips_information{
+        top: 64px;
+    }
+}
+@media screen and (max-width: 640px){
+    .step_content:last-child {
+        padding: 0 15px;
+    }
+    .select_questions{
+        margin-top: 0;
+    }
+    .content_question{
+        order: 1;
+        margin-top: 15px;
+        width: 100%;
+        font-size: 12px;
+    }
+    .custom_button{
+        width: 130px;
+    }
+    .custom_small{
+        font-size: 12px;
+    }
+    .ellips_information{
+        top: 64px;
+        padding: 10px 0;
+    }
+}

@@ -1,0 +1,57 @@
+.input-information {
+    width: 445px;
+    margin-right: 120px;
+}
+.input-information input, .margin_input{
+    width: 100%;
+}
+.custom_small{
+     font-weight: 600;
+     font-size: 16px;
+ }
+.confirm_input{
+    width: 100%;
+    border-radius: 20px;
+    color: rgb(232, 232, 232);
+    font-size: 14px;
+}
+@media screen and (max-width: 1100px){
+    .input-information{
+        width: 400px;
+        margin-right: 90px
+    }
+    .input-information input, .margin_input{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1023px){
+    .input-information{
+        width: 570px;
+        margin-right: 0;
+    }
+   .container_payment{
+       flex-direction: column!important;
+       align-items: center;
+   }
+    .card_and_mobile_container{
+        width: 93%;
+    }
+    .total{
+        display: none!important;
+    }
+}
+@media screen and (max-width: 767px){
+    .input-information{
+        width: 100%;
+        padding: 0 30px;
+    }
+    .custom_small{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 567px){
+    .input-information{
+        width: 100%;
+        padding: 0 15px;
+    }
+}

@@ -1,0 +1,74 @@
+<section class="goal-and-benefits position-relative d-flex justify-content-center" id="benefits">
+    <div v-if="screen.value >= 1251">
+        <div class="elem_elipse"></div>
+        <div class="elem_elipse elem_elipse1"></div>
+        <div class="container_margin container_benefits">
+            <div class="title_block_benefits text-center vstyle"
+                 v-if="twoSection && twoSection.title"
+                 v-html="twoSection.title">
+            </div>
+            <div class="description_block_benefits text-center vstyle"
+                 v-if="twoSection && twoSection.description"
+                 v-html="twoSection.description">
+            </div>
+            <div class="d-flex flex-wrap justify-content: center;">
+                <div class="item_block_information d-flex"
+                     v-for="item in information_benefits_list">
+                    <div class="position-relative" style="margin-top: 20px;">
+                        <div class="image_elips"></div>
+                        <div class="image_for_information position-absolute"
+                             :style="{backgroundImage: `url(${item.path_image})`}">
+                        </div>
+                    </div>
+                    <div style="margin-left: 24px">
+                        <div class="title_for_information vstyle"
+                             v-if="item && item.title"
+                             v-html="item.title">
+                        </div>
+                        <div class="small_text description_for_information text-left vstyle"
+                             v-if="item && item.description"
+                             v-html="item.description">
+                            <!--{{}}-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%" v-if="screen.value < 1250">
+        <div class="elem_elipse"></div>
+        <div class="elem_elipse elem_elipse1"></div>
+        <div class="container_margin container_benefits">
+            <div class="title_block_benefits text-center text-uppercase vstyle"
+                 v-if="twoSection && twoSection.title"
+                 v-html="twoSection.title">
+            </div>
+            <div class="description_block_benefits text-center vstyle"
+                 v-if="twoSection && twoSection.description"
+                 v-html="twoSection.description">
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <div class="item_block_information d-flex align-items-center"
+                     v-for="item in information_benefits_list">
+                    <div class="position-relative">
+                        <div class="image_elips"></div>
+                        <div class="image_for_information position-absolute"
+                             :style="{backgroundImage: `url(${item.path_image})`}">
+                        </div>
+                    </div>
+                    <div class="item_block_information_text">
+                        <div class="title_for_information vstyle"
+                             v-if="item && item.title"
+                             v-html="item.title">
+                        </div>
+                        <div class="small_text description_for_information text-left vstyle"
+                             v-if="item && item.description"
+                             v-html="item.description">
+                            <!--{{}}-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

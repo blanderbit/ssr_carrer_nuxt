@@ -1,0 +1,121 @@
+<section class="input-information payment d-flex align-items-center flex-column" >
+    <div class="small_text custom_small vstyle" style="margin-top: 0"
+         v-if="confirmDetail && confirmDetail.payment"
+         v-html="confirmDetail.payment"></div>
+    <form class="card_and_mobile_container d-flex justify-content-between" >
+        <div class="card_block">
+            <div class="styled-input-single d-flex align-items-center" v-for="(item, index) in cards" >
+                <input type="radio" name="fieldset-1"
+                       :id="'radio-example-one'+index" @change="radio_count(item, cards)"
+                       :checked="item.status"/>
+                <label :for="'radio-example-one'+index" >
+                    <div class="position-relative font_payment">
+                        {{item.name}}
+                        <div :ref="11+index" class="info info_payment"
+                             @click.prevent="">
+                            <div class="position-relative">
+                                <div class="card_payment" :style="{
+                                        right: position(item.card),
+                                        width: screen.value < 567 &&  item.card.length > 1? '190px': 'auto',
+                                    }">
+                                    <div class="item"
+                                         v-for="card in item.card"
+                                         :style="{
+                                            'background-image': 'url('+base_url + 'assets/card/' + card+'.svg)'
+                                         }">
+                                    </div>
+                                </div>
+                            </div>
+                            ?
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="styled-input-single d-flex align-items-center"
+                v-for="(item, index) in cards1">
+                <input type="radio" name="fieldset-1" @change="radio_count(item, cards1)"
+                       :id="'radio-example-two'+ (index + cards.length )" :checked="item.status"/>
+                <label :for="'radio-example-two'+(index + cards.length )">
+                    <div class="position-relative font_payment">
+                        {{item.name}}
+                        <div :ref="21+index" class="info info_payment"
+                             @click.prevent="">
+                            <div class="position-relative">
+                                <div class="card_payment"
+                                     :style="{right: screen.value < 567 ? position(item.card) :'18px',
+                                              bottom: screen.value < 567 ? '' : '-24px',
+                                              width: screen.value < 567 && item.card.length > 1 ? '190px': 'auto',}">
+                                    <div class="item"
+                                         v-for="card in item.card"
+                                         :style="{
+                                            'background-image': 'url('+base_url + 'assets/card/' + card+'.svg)'
+                                         }">
+                                    </div>
+                                </div>
+                            </div>
+                            ?
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </form>
+    <div class="margin_input align-self-start"
+         :class="{margin_input_no_active: !error.card.errors}">
+        <div class="error vstyle" v-if="error.card.errors">
+            <div v-if="error.card">{{error.card.message.radio}}</div>
+        </div>
+    </div>
+    <div class="small_text custom_small vstyle"
+         :style="{'margin-top': error.card.errors ? '-2px' : '7px'}"
+         v-if="confirmDetail && confirmDetail.enterVaucher"
+         v-html="confirmDetail.enterVaucher">
+    </div>
+    <div class="margin_input">
+        <input type="text"
+               class="disabled"
+               v-model="data.code"
+               v-if="confirmDetail && confirmDetail.checkoutVaucher"
+               :class="{error:error.code.errors}"
+               :placeholder="confirmDetail.checkoutVaucher.replace(/(<([^>]+)>)/g,'')"
+               v-disabled_input="cards.concat(cards1)">
+        <div class="error" v-if=" error.code.errors">
+            <div v-if="error.code.message">{{error.code.message.required}}</div>
+        </div>
+    </div>
+    <div class="d-flex flex-grow-1 align-items-center custom_button
+         justify-content-end flex-column align-items-center total"
+         style="width: 100%">
+        <div class="small_text custom_small vstyle"
+             style="margin-bottom: 24px"
+             v-if="confirmDetail && confirmDetail.totalPrice"
+             v-html="confirmDetail.totalPrice"></div>
+        <div style="width: 100%"
+             class="d-flex justify-content-between align-items-baseline checkout">
+            <div class="justify-content-end"
+                 style="width: 47%">
+                <input type="text"
+                       v-model="data_in_input_information.price"
+                       disabled
+                       style="font-weight: 600; width: 100%">
+            </div>
+            <a class="button_to custom_button d-flex align-items-center justify-content-center vstyle"
+               @click="open_confirm_modal()"
+               style="font-weight: 600;width: 47%; margin-top: 0"
+               v-if="confirmDetail && confirmDetail.checkoutButton"
+               v-html="confirmDetail.checkoutButton">
+            </a>
+        </div>
+    </div>
+    <div class="d-flex flex-grow-1 align-items-end custom_button button_checkout">
+        <a class="button_to custom_button d-flex align-items-center justify-content-center vstyle"
+            @click="open_confirm_modal()"
+            style="font-weight: 600"
+           v-if="confirmDetail && confirmDetail.checkoutButton"
+           v-html="confirmDetail.checkoutButton">
+        </a>
+    </div>
+</section>
+

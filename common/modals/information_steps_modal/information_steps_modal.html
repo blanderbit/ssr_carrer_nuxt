@@ -1,0 +1,101 @@
+<section class="information-steps-modal d-flex justify-content-center align-items-center position-fixed "
+         @click.self="close_modal()"
+         :style="{background: transitions ? 'rgba(51, 51, 51, 0.1)':  'transparent'}">
+    <div class="content_modal d-flex align-items-center flex-column position-relative"
+    :style="{transform: transitions ? 'translateY(0%)':  'translateY(-200%)'}">
+        <div class="image_close position-absolute image" @click.self="close_modal()"></div>
+        <div class="custom_small vstyle"
+             v-if="modal && modal.sendButton"
+             v-html="modal.sendButton">
+        </div>
+        <div class="content">
+            <div>
+                <span class="vstyle" v-if="testSection && testSection.STEP"
+                      style="text-transform: capitalize;font-weight: 600"
+                      v-html="testSection.STEP"></span>
+                <span class="vstyle"
+                      v-if="data && data.data && data.data.step[1]"
+                      v-html="data.data.step[1]">
+                </span>
+                <span class="vstyle" v-html="upper_text[0]"></span>
+                <!--<span style="font-weight: 600">-->
+                    <span v-if="testSection && testSection.STEP"
+                          class="vstyle"
+                          style="text-transform: lowercase;text-transform: capitalize;font-weight: 600"
+                          v-html="testSection.STEP"></span>
+                    <span v-if="data && data.data && data.data.step[2]"
+                          class="vstyle"
+                          v-html="data.data.step[2]">
+                    </span>
+                <!--</span>-->
+                <span class="vstyle" v-html="upper_text[1]"></span>
+                <span style="font-weight: 600">60
+                    <span style="text-transform: lowercase"
+                          class="vstyle"
+                          v-if="testSection && testSection.Questions"
+                          v-html="testSection.Questions">
+                    </span>
+                </span>
+                <span class="vstyle"
+                        v-html="upper_text[2]">
+                </span>
+                <span class="vstyle" style="font-weight: 600;text-transform: lowercase"
+                      v-if="data && data.data && data.data.name"
+                      v-html="data.data.name">
+                </span>.
+                <span class="vstyle"
+                      v-html="upper_text[3]">
+                </span>
+            </div>
+            <br>
+
+            <div class="position-relative ellipse_margin">
+                <div class="ellipse position-absolute" :style="{background : '#77DCC1'}"></div>
+                <div>
+                    <span style="font-weight: 600" class="vstyle"
+                          v-html="textClick[0]">
+                    </span>
+                    -
+                    <span class="vstyle" v-if="data && data.data && data.data.state && data.data.state.like"
+                    v-html="data.data.state.like"></span>
+                </div>
+            </div><br>
+
+            <div class="position-relative ellipse_margin">
+                <div class="ellipse position-absolute" :style="{background : '#FDC572'}"></div>
+                <div>
+                    <span style="font-weight: 600" class="vstyle"
+                          v-html="textClick[1]">
+                    </span>
+                    -
+                    <span class="vstyle" v-if="data && data.data && data.data.state && data.data.state.middle"
+                          v-html="data.data.state.middle"></span>
+                </div>
+            </div><br>
+
+            <div class="position-relative ellipse_margin">
+                <div class="ellipse position-absolute" :style="{background : '#F59A9A'}"></div>
+                <div>
+                    <span style="font-weight: 600" class="vstyle"
+                          v-html="textClick[2]">
+                    </span>  -
+                    <span class="vstyle" v-if="data && data.data && data.data.state && data.data.state.dislike"
+                          v-html="data.data.state.dislike"></span>
+                </div>
+            </div><br>
+            <div class="ellipse_margin">
+               <span class="vstyle" v-html="lower_text[0]"> </span>
+                <span style="font-weight: 600" v-html="lower_text[1]">
+                </span>
+                <div class="simvol">i</div>
+                <span v-html="lower_text[2]">of it.</span><br><br>
+            </div>
+            <span class="ellipse_margin"><span v-html="lower_text[3]">Good Luck!</span></span>
+        </div>
+        <div class="flex-grow-1 d-flex align-items-end justify-content-center button">
+            <div class="button_to custom_button d-flex align-items-center justify-content-center" @click="close_modal()">
+                Ok
+            </div>
+        </div>
+    </div>
+</section>
